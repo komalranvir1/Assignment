@@ -1,0 +1,53 @@
+<div class="container">
+
+    <h6 style="padding-top: 1%;">Enter Values</h6>
+    <form [formGroup]="graphForm" style="padding-top: 2%;">
+        <div class="row" >
+            <div class="col-md-3">
+                <input type="text" placeholder="Input Value" class="form-control" formControlName="inputValue" style="background-color: skyblue;"
+                    (keyup.enter)="onKeyPress($event)">
+            </div>
+
+            <div class="col-md-3">
+                <input type="text" placeholder="Max Value" class="form-control" formControlName="maxValue" style="background-color: skyblue;"
+                    (keyup.enter)="onKeyPress($event)">
+            </div>
+
+            <!-- <div class="col-md-6">
+                <h6>Selection Colors</h6>
+                <input type="checkbox" style="color: aliceblue;" >  FFFFFF <br>
+                <input type="checkbox" style="color: skyblue;" >  C2E3FF <br>
+                <input type="checkbox" style="color: blue;">  00BCFF <br>
+                <input type="checkbox" style="color: darkolivegreen;">  003F73 <br>
+
+            </div> -->
+
+        </div>
+
+    </form>
+    <div class="row" style="padding-top: 100px;">
+        <h6>Graphs</h6>
+        <div class="col-md-4">
+
+            <div style=" position:absolute; height: auto;">
+                <canvas id="barChart"></canvas>
+                <h6>Level 1</h6>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div style=" position:absolute;">
+                <canvas id="pieChart"></canvas>
+                <h6>Level 2</h6>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div style=" position:absolute;">
+                <canvas id="gradientChart"></canvas>
+                <h6>level 3</h6>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
